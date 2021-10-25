@@ -51,3 +51,23 @@ function highPass(arr, cutoff){
 }
 var result = highPass([6, 8, 3, 10, -2, 5, 9], 5);
 console.log(result);
+
+//5. Better Than Average
+// Given an array of numbers return a count of how many of the numbers are larger than average
+function betterThanAverage(arr){
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++){
+        sum += arr[i];
+    }
+    var avg = sum / arr.length;
+    console.log(avg)
+    var count = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] > avg){
+            count++;
+        }
+    }
+    return count;
+}
+var result = betterThanAverage([6, 8, 3, 10, -2, 5, 9]);
+console.log(result)
